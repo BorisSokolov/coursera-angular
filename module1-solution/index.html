@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>body { font-size: 1.3em; }</style>
+    <title>Name Calculator</title>
+  </head>
+  <body ng-app="LunchRecommendations">
+    <h1>Lunch Recommendations</h1>
+    <div ng-controller="LunchRecommendationsController">
+      <div>
+         Please list the items you usually eat for lunch separeted by commas:
+         <br/>
+        <input type="text"
+          ng-model="list"
+          placeholder="Apple, Orange, Milk"/>
+      </div>
+      <br/>
+      <button ng-click="displayRecommendation()">Check If Too Much</button>
+      <br/>
+      <div>Recommendation: {{recommendation}}</div>
+    </div>
+  </body>
+</html>
